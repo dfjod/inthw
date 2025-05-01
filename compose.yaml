@@ -8,6 +8,7 @@ services:
       - POSTGRES_DB=inthw
   backend:
     build: .
+    user: 1000:1000
     volumes:
       - .:/inthw
     ports:
