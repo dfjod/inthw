@@ -1,14 +1,16 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-class Client(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
+class User(AbstractUser, models.Model):
+    pass
 
 class Project(models.Model):
     label = models.CharField(max_length=35)
-    client = models.ForeignKey(Client, on_delete=models.CASCADE)
+    client = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        limit_choices_to={'is_staff': False}
+    )
 
     def __str__(self):
         return self.label

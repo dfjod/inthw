@@ -1,10 +1,10 @@
 from rest_framework import serializers
 from . import models
 
-class ClientSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Client
-        fields = ['id', 'name']
+        model = models.User
+        fields = ['id', 'username']
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:

@@ -1,49 +1,84 @@
 from django.shortcuts import render
 from rest_framework import generics
+from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from . import models
 from . import serializers
 
-class ClientListCreate(generics.ListCreateAPIView):
-    queryset = models.Client.objects.all()
-    serializer_class = serializers.ClientSerializer
+class ClientReadAccessMixin:
+    def get_permissions(self):
+        self.permission_classes = [IsAdminUser]
 
-class ProjectListCreate(generics.ListCreateAPIView):
+        if self.request.method == 'GET':
+            self.permission_classes = [IsAuthenticated]
+
+        return super().get_permissions()
+
+class ClientOwnedQuerysetMixin:
+    def get_queryset(self):
+        qs = super().get_queryset()
+
+        if not self.request.user.is_staff:
+            qs = qs.filter(client = self.request.user)
+        
+        return qs
+
+
+class ClientListCreate(generics.ListCreateAPIView):
+    queryset = models.User.objects.filter(is_staff = False)
+    serializer_class = serializers.UserSerializer
+    permission_classes = [IsAdminUser]
+
+class ProjectListCreate(
+    ClientReadAccessMixin,
+    ClientOwnedQuerysetMixin,
+    generics.ListCreateAPIView
+):
     queryset = models.Project.objects.all()
     serializer_class = serializers.ProjectSerializer
 
 class PersonListCreate(generics.ListCreateAPIView):
     queryset = models.Person.objects.all()
     serializer_class = serializers.PersonSerializer
+    permission_classes = [IsAdminUser]
 
 class DataPointListCreate(generics.ListCreateAPIView):
     queryset = models.DataPoint.objects.all()
     serializer_class = serializers.DataPointSerializer
+    permission_classes = [IsAdminUser]
 
-class ObjectListCreate(generics.ListCreateAPIView):
+class ObjectListCreate(
+    ClientReadAccessMixin,
+    ClientOwnedQuerysetMixin,
+    generics.ListCreateAPIView
+):
     queryset = models.Object.objects.all()
     serializer_class = serializers.ObjectSerializer
 
 class ClientRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.Client.objects.all()
-    serializer_class = serializers.ClientSerializer
-    lookup_field = 'pk'
+    queryset = models.User.objects.filter(is_staff = False)
+    serializer_class = serializers.UserSerializer
+    permission_classes = [IsAdminUser]
 
-class ProjectRetrieveUpdateDestory(generics.RetrieveUpdateDestroyAPIView):
+class ProjectRetrieveUpdateDestory(
+    ClientReadAccessMixin,
+    ClientOwnedQuerysetMixin,
+    generics.RetrieveUpdateDestroyAPIView
+):
     queryset = models.Project.objects.all()
     serializer_class = serializers.ProjectSerializer
-    lookup_field = 'pk'
 
 class PersonRetrieveUpdateDestory(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Person.objects.all()
     serializer_class = serializers.PersonSerializer
-    lookup_field = 'pk'
 
 class DataPointRetrieveUpdateDestory(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.DataPoint.objects.all()
     serializer_class = serializers.DataPointSerializer
-    lookup_field = 'pk'
 
-class ObjectRetrieveUpdateDestory(generics.RetrieveUpdateDestroyAPIView):
+class ObjectRetrieveUpdateDestory(
+    ClientReadAccessMixin,
+    ClientOwnedQuerysetMixin,
+    generics.RetrieveUpdateDestroyAPIView
+):
     queryset = models.Object.objects.all()
     serializer_class = serializers.ObjectSerializer
-    lookup_field = 'pk'
