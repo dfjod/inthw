@@ -46,13 +46,13 @@ class DataPointListCreate(generics.ListCreateAPIView):
     serializer_class = serializers.DataPointSerializer
     permission_classes = [IsAdminUser]
 
-class ObjectListCreate(
+class ProjectObjectListCreate(
     ClientReadAccessMixin,
     ClientOwnedQuerysetMixin,
     generics.ListCreateAPIView
 ):
-    queryset = models.Object.objects.all()
-    serializer_class = serializers.ObjectSerializer
+    queryset = models.ProjectObject.objects.all()
+    serializer_class = serializers.ProjectObjectSerializer
 
 class ClientRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.User.objects.filter(is_staff = False)
@@ -75,10 +75,10 @@ class DataPointRetrieveUpdateDestory(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.DataPoint.objects.all()
     serializer_class = serializers.DataPointSerializer
 
-class ObjectRetrieveUpdateDestory(
+class ProjectObjectRetrieveUpdateDestory(
     ClientReadAccessMixin,
     ClientOwnedQuerysetMixin,
     generics.RetrieveUpdateDestroyAPIView
 ):
-    queryset = models.Object.objects.all()
-    serializer_class = serializers.ObjectSerializer
+    queryset = models.ProjectObject.objects.all()
+    serializer_class = serializers.ProjectObjectSerializer

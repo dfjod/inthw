@@ -6,11 +6,6 @@ class UserSerializer(serializers.ModelSerializer):
         model = models.User
         fields = ['id', 'username']
 
-class ProjectSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.Project
-        fields = ['id', 'label', 'client']
-
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Person
@@ -21,7 +16,17 @@ class DataPointSerializer(serializers.ModelSerializer):
         model = models.DataPoint
         fields = ['id', 'label']
 
-class ObjectSerializer(serializers.ModelSerializer):
+class ProjectObjectSerializer(serializers.ModelSerializer):
+    responsible_persons = PersonSerializer(many=True, read_only=True)
+    data_points = DataPointSerializer(many=True, read_only=True)
+
     class Meta:
-        model = models.Object
+        model = models.ProjectObject
         fields = ['id', 'label', 'project', 'responsible_persons', 'data_points']
+
+class ProjectSerializer(serializers.ModelSerializer):
+    project_objects = ProjectObjectSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = models.Project
+        fields = ['id', 'label', 'client', 'project_objects']
