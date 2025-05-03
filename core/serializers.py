@@ -1,20 +1,24 @@
 from rest_framework import serializers
 from . import models
 
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.User
-        fields = ['id', 'username']
+        fields = ["id", "username"]
+
 
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Person
-        fields = ['id', 'first_name', 'last_name']
+        fields = ["id", "first_name", "last_name"]
+
 
 class DataPointSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.DataPoint
-        fields = ['id', 'label']
+        fields = ["id", "label"]
+
 
 class ProjectObjectSerializer(serializers.ModelSerializer):
     responsible_persons = PersonSerializer(many=True, read_only=True)
@@ -22,11 +26,12 @@ class ProjectObjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.ProjectObject
-        fields = ['id', 'label', 'project', 'responsible_persons', 'data_points']
+        fields = ["id", "label", "project", "responsible_persons", "data_points"]
+
 
 class ProjectSerializer(serializers.ModelSerializer):
     project_objects = ProjectObjectSerializer(many=True, read_only=True)
 
     class Meta:
         model = models.Project
-        fields = ['id', 'label', 'client', 'project_objects']
+        fields = ["id", "label", "client", "project_objects"]
