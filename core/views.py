@@ -15,11 +15,14 @@ class ClientReadAccessMixin:
 
 
 class ClientOwnedQuerysetMixin:
+    client_lookup = "client"
+
     def get_queryset(self):
         qs = super().get_queryset()
 
-        if not self.request.user.is_staff:
-            qs = qs.filter(client=self.request.user)
+        if not self.request.user.is_staff or not self.request.user.is_superuser:
+            lookup = {self.client_lookup: self.request.user.client}
+            qs = qs.filter(**lookup)
 
         return qs
 
@@ -54,6 +57,7 @@ class ProjectObjectListCreate(
 ):
     queryset = models.ProjectObject.objects.all()
     serializer_class = serializers.ProjectObjectSerializer
+    client_lookup = "project__client"
 
 
 class ClientRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
@@ -69,16 +73,19 @@ class ProjectRetrieveUpdateDestory(
 ):
     queryset = models.Project.objects.all()
     serializer_class = serializers.ProjectSerializer
+    permission_classes = [IsAdminUser]
 
 
 class PersonRetrieveUpdateDestory(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Person.objects.all()
     serializer_class = serializers.PersonSerializer
+    permission_classes = [IsAdminUser]
 
 
 class DataPointRetrieveUpdateDestory(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.DataPoint.objects.all()
     serializer_class = serializers.DataPointSerializer
+    permission_classes = [IsAdminUser]
 
 
 class ProjectObjectRetrieveUpdateDestory(
@@ -88,3 +95,5 @@ class ProjectObjectRetrieveUpdateDestory(
 ):
     queryset = models.ProjectObject.objects.all()
     serializer_class = serializers.ProjectObjectSerializer
+    permission_classes = [IsAdminUser]
+    client_lookup = "project__client"
