@@ -25,7 +25,7 @@ class ClientOwnedQuerysetMixin:
 
 
 class ClientListCreate(generics.ListCreateAPIView):
-    queryset = models.User.objects.filter(is_staff=False)
+    queryset = models.User.objects.filter(is_staff=False, is_superuser=False)
     serializer_class = serializers.UserSerializer
     permission_classes = [IsAdminUser]
 
