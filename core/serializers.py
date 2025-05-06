@@ -2,18 +2,13 @@ from rest_framework import serializers
 from . import models
 
 
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.User
-        fields = ["id", "username"]
-
-
 class ClientSerializer(serializers.ModelSerializer):
-    username = serializers.CharField(source='user.username')
+    user = serializers.PrimaryKeyRelatedField(queryset=models.User.objects.filter(client__isnull=True, is_staff=False, is_superuser=False))
+    username = serializers.CharField(source='user.username', read_only=True)
 
     class Meta:
         model = models.Client
-        fields = ["username"]
+        fields = ["id", "user", "username"]
 
 
 class PersonSerializer(serializers.ModelSerializer):

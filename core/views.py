@@ -54,8 +54,8 @@ class ClientOwnedQuerysetMixin:
 
 
 class ClientListCreate(generics.ListCreateAPIView):
-    queryset = models.User.objects.filter(is_staff=False, is_superuser=False)
-    serializer_class = serializers.UserSerializer
+    queryset = models.Client.objects.all()
+    serializer_class = serializers.ClientSerializer
     permission_classes = [IsAdminUser]
 
 
@@ -87,8 +87,8 @@ class ProjectObjectListCreate(
 
 
 class ClientRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.User.objects.filter(is_staff=False)
-    serializer_class = serializers.UserSerializer
+    queryset = models.Client.objects.all()
+    serializer_class = serializers.ClientSerializer
     permission_classes = [IsAdminUser]
 
 

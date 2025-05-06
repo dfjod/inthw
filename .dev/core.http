@@ -1,68 +1,68 @@
 # Get clients
-GET http://localhost:8000/api/clients/ HTTP/1.1
+GET http://localhost:8000/api/v1/clients/ HTTP/1.1
 Authorization: Bearer
 
 ###
 # Get client by id
-GET http://localhost:8000/api/clients/1 HTTP/1.1
+GET http://localhost:8000/api/v1/clients/1 HTTP/1.1
 Authorization: Bearer 
 
 ###
 # Get projects
-GET http://localhost:8000/api/projects/ HTTP/1.1
+GET http://localhost:8000/api/v1/projects/ HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 
 ###
 # Get objects
-GET http://localhost:8000/api/objects/ HTTP/1.1
+GET http://localhost:8000/api/v1/objects/ HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 
 ###
 # Get object by id
-GET http://localhost:8000/api/objects/1 HTTP/1.1
+GET http://localhost:8000/api/v1/objects/1 HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 
 ###
 # Get persons
-GET http://localhost:8000/api/persons/ HTTP/1.1
+GET http://localhost:8000/api/v1/persons/ HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 
 ###
 # Get person by id
-GET http://localhost:8000/api/persons/1 HTTP/1.1
+GET http://localhost:8000/api/v1/persons/1 HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 
 ###
 # Get data points
-GET http://localhost:8000/api/datapoints/ HTTP/1.1
+GET http://localhost:8000/api/v1/datapoints/ HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 
 ###
 # Get data point by id
-GET http://localhost:8000/api/datapoints/1 HTTP/1.1
+GET http://localhost:8000/api/v1/datapoints/1 HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 
 ###
 # Create a client
-POST http://localhost:8000/api/clients/ HTTP/1.1
-Authorization: Bearer
+POST http://localhost:8000/api/v1/clients/ HTTP/1.1
+Authorization: Bearer 
 Accept: application/json
 Content-Type: application/json
 
 {
-    "username": ""
+    "user": 5
 }
 
 ###
 # Create a project
-POST http://localhost:8000/api/projects/ HTTP/1.1
+POST http://localhost:8000/api/v1/projects/ HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 Content-Type: application/json
@@ -74,7 +74,7 @@ Content-Type: application/json
 
 ###
 # Create a object
-POST http://localhost:8000/api/objects/ HTTP/1.1
+POST http://localhost:8000/api/v1/objects/ HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 Content-Type: application/json
@@ -86,7 +86,7 @@ Content-Type: application/json
 
 ###
 # Create a person
-POST http://localhost:8000/api/persons/ HTTP/1.1
+POST http://localhost:8000/api/v1/persons/ HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 Content-Type: application/json
@@ -98,7 +98,7 @@ Content-Type: application/json
 
 ###
 # Create a data point
-POST http://localhost:8000/api/datapoints/ HTTP/1.1
+POST http://localhost:8000/api/v1/datapoints/ HTTP/1.1
 Authorization: Bearer
 Accept: application/json
 Content-Type: application/json
@@ -113,8 +113,8 @@ POST http://localhost:8000/api/token/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "avots",
-    "password": "avots"
+    "username": "admin",
+    "password": "admin"
 }
 
 ###

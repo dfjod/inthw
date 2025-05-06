@@ -1,6 +1,7 @@
 from django.contrib import admin
 from . import models
 from django.contrib.auth.models import User
+from django.contrib.auth.admin import UserAdmin
 
 
 class ClientAdmin(admin.ModelAdmin):
@@ -28,6 +29,14 @@ class ProjectObjectDataPointAdmin(admin.ModelAdmin):
         "id", "project_object", "data_point", "value", "created_at"
     ]
 
+
+class CustomUserAdmin(UserAdmin):
+    list_display = ["username", "id"]
+    readonly_fields = ["id"]
+
+
+admin.site.unregister(User)
+admin.site.register(User, CustomUserAdmin)
 
 admin.site.register(models.Client, ClientAdmin)
 admin.site.register(models.Project, ProjectAdmin)
