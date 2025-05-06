@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="497pt" height="572pt" viewBox="0.00 0.00 497.19 572.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 568)">
+<title>model_graph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-568 493.19,-568 493.19,4 -4,4"/>
+<!-- core_models_Client -->
+<g id="node1" class="node">
+<title>core_models_Client</title>
+<polygon fill="white" stroke="none" points="185.88,-85.6 185.88,-150.4 329.86,-150.4 329.86,-85.6 185.88,-85.6"/>
+<polygon fill="#1b563f" stroke="none" points="186.88,-127.4 186.88,-149.4 328.86,-149.4 328.86,-127.4 186.88,-127.4"/>
+<text text-anchor="start" x="230.82" y="-136.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="238.82" y="-136.4" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    Client    </text>
+<text text-anchor="start" x="188.88" y="-119.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="196.88" y="-119.2" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text text-anchor="start" x="203.55" y="-119.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="241.75" y="-119.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="249.75" y="-119.2" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text text-anchor="start" x="295.53" y="-119.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="188.88" y="-105.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="196.88" y="-105.6" font-family="Roboto" font-weight="bold" font-size="8.00">user</text>
+<text text-anchor="start" x="211.55" y="-105.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="241.75" y="-105.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="249.75" y="-105.6" font-family="Roboto" font-weight="bold" font-size="8.00">OneToOneField (id)</text>
+<text text-anchor="start" x="318.86" y="-105.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="188.88" y="-92" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="196.88" y="-92" font-family="Roboto" font-size="8.00" fill="#7b7b7b">created_at</text>
+<text text-anchor="start" x="229.75" y="-92" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="241.75" y="-92" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="249.75" y="-92" font-family="Roboto" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text text-anchor="start" x="298.18" y="-92" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="185.88,-85.6 185.88,-150.4 329.86,-150.4 329.86,-85.6 185.88,-85.6"/>
+</g>
+<!-- django_contrib_auth_models_User -->
+<g id="node7" class="node">
+<title>django_contrib_auth_models_User</title>
+<polygon fill="white" stroke="none" points="238.54,-6.8 238.54,-29.2 277.2,-29.2 277.2,-6.8 238.54,-6.8"/>
+<polygon fill="#1b563f" stroke="none" points="238.54,-6.8 238.54,-29.2 277.2,-29.2 277.2,-6.8 238.54,-6.8"/>
+<text text-anchor="start" x="242.54" y="-15.4" font-family="Roboto" font-size="8.00">  </text>
+<text text-anchor="start" x="246.54" y="-15.4" font-family="Roboto" font-size="12.00" fill="white">User</text>
+<text text-anchor="start" x="269.2" y="-15.4" font-family="Roboto" font-size="8.00">  </text>
+</g>
+<!-- core_models_Client&#45;&gt;django_contrib_auth_models_User -->
+<g id="edge1" class="edge">
+<title>core_models_Client-&gt;django_contrib_auth_models_User</title>
+<path fill="none" stroke="black" d="M257.87,-81.62C257.87,-66.05 257.87,-48.49 257.87,-35.93"/>
+<text text-anchor="middle" x="278.08" y="-56.4" font-family="Roboto" font-size="8.00"> user (client)</text>
+</g>
+<!-- core_models_Project -->
+<g id="node2" class="node">
+<title>core_models_Project</title>
+<polygon fill="white" stroke="none" points="193.22,-204 193.22,-282.4 322.52,-282.4 322.52,-204 193.22,-204"/>
+<polygon fill="#1b563f" stroke="none" points="194.22,-259.4 194.22,-281.4 321.52,-281.4 321.52,-259.4 194.22,-259.4"/>
+<text text-anchor="start" x="228.33" y="-268.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="236.33" y="-268.4" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    Project    </text>
+<text text-anchor="start" x="196.22" y="-251.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="204.22" y="-251.2" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text text-anchor="start" x="210.89" y="-251.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="249.09" y="-251.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="257.09" y="-251.2" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text text-anchor="start" x="302.87" y="-251.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="196.22" y="-237.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="204.22" y="-237.6" font-family="Roboto" font-weight="bold" font-size="8.00">client</text>
+<text text-anchor="start" x="222.88" y="-237.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="249.09" y="-237.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="257.09" y="-237.6" font-family="Roboto" font-weight="bold" font-size="8.00">ForeignKey (id)</text>
+<text text-anchor="start" x="311.52" y="-237.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="196.22" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="204.22" y="-224" font-family="Roboto" font-size="8.00" fill="#7b7b7b">created_at</text>
+<text text-anchor="start" x="237.09" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="249.09" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="257.09" y="-224" font-family="Roboto" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text text-anchor="start" x="305.52" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="196.22" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="204.22" y="-210.4" font-family="Roboto" font-size="8.00">label</text>
+<text text-anchor="start" x="219.77" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="249.09" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="257.09" y="-210.4" font-family="Roboto" font-size="8.00">CharField</text>
+<text text-anchor="start" x="289.08" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="193.22,-204 193.22,-282.4 322.52,-282.4 322.52,-204 193.22,-204"/>
+</g>
+<!-- core_models_Project&#45;&gt;core_models_Client -->
+<g id="edge2" class="edge">
+<title>core_models_Project-&gt;core_models_Client</title>
+<path fill="none" stroke="black" d="M257.87,-191.24C257.87,-178.82 257.87,-165.81 257.87,-154.31"/>
+<ellipse fill="black" stroke="black" cx="257.87" cy="-195.65" rx="4" ry="4"/>
+<text text-anchor="middle" x="282.53" y="-174.8" font-family="Roboto" font-size="8.00"> client (project)</text>
+</g>
+<!-- core_models_Person -->
+<g id="node3" class="node">
+<title>core_models_Person</title>
+<polygon fill="white" stroke="none" points="356.55,-204 356.55,-282.4 481.19,-282.4 481.19,-204 356.55,-204"/>
+<polygon fill="#1b563f" stroke="none" points="357.55,-259.4 357.55,-281.4 480.19,-281.4 480.19,-259.4 357.55,-259.4"/>
+<text text-anchor="start" x="390.15" y="-268.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="398.15" y="-268.4" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    Person    </text>
+<text text-anchor="start" x="359.55" y="-251.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="367.55" y="-251.2" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text text-anchor="start" x="374.22" y="-251.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="413.76" y="-251.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="421.76" y="-251.2" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text text-anchor="start" x="467.54" y="-251.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="359.55" y="-237.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="367.55" y="-237.6" font-family="Roboto" font-size="8.00" fill="#7b7b7b">created_at</text>
+<text text-anchor="start" x="400.41" y="-237.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="413.76" y="-237.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="421.76" y="-237.6" font-family="Roboto" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text text-anchor="start" x="470.19" y="-237.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="359.55" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="367.55" y="-224" font-family="Roboto" font-size="8.00">first_name</text>
+<text text-anchor="start" x="401.76" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="413.76" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="421.76" y="-224" font-family="Roboto" font-size="8.00">CharField</text>
+<text text-anchor="start" x="453.76" y="-224" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="359.55" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="367.55" y="-210.4" font-family="Roboto" font-size="8.00">last_name</text>
+<text text-anchor="start" x="399.98" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="413.76" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="421.76" y="-210.4" font-family="Roboto" font-size="8.00">CharField</text>
+<text text-anchor="start" x="453.76" y="-210.4" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="356.55,-204 356.55,-282.4 481.19,-282.4 481.19,-204 356.55,-204"/>
+</g>
+<!-- core_models_DataPoint -->
+<g id="node4" class="node">
+<title>core_models_DataPoint</title>
+<polygon fill="white" stroke="none" points="25.22,-210.8 25.22,-275.6 148.52,-275.6 148.52,-210.8 25.22,-210.8"/>
+<polygon fill="#1b563f" stroke="none" points="26.22,-252.6 26.22,-274.6 147.52,-274.6 147.52,-252.6 26.22,-252.6"/>
+<text text-anchor="start" x="51.21" y="-261.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="59.21" y="-261.6" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    DataPoint    </text>
+<text text-anchor="start" x="28.22" y="-244.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="36.22" y="-244.4" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text text-anchor="start" x="42.9" y="-244.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="81.09" y="-244.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="89.09" y="-244.4" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text text-anchor="start" x="134.87" y="-244.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="28.22" y="-230.8" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="36.22" y="-230.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">created_at</text>
+<text text-anchor="start" x="69.09" y="-230.8" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="81.09" y="-230.8" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="89.09" y="-230.8" font-family="Roboto" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text text-anchor="start" x="137.52" y="-230.8" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="28.22" y="-217.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="36.22" y="-217.2" font-family="Roboto" font-size="8.00">label</text>
+<text text-anchor="start" x="51.77" y="-217.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="81.09" y="-217.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="89.09" y="-217.2" font-family="Roboto" font-size="8.00">CharField</text>
+<text text-anchor="start" x="121.08" y="-217.2" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="25.22,-210.8 25.22,-275.6 148.52,-275.6 148.52,-210.8 25.22,-210.8"/>
+</g>
+<!-- core_models_ProjectObject -->
+<g id="node5" class="node">
+<title>core_models_ProjectObject</title>
+<polygon fill="white" stroke="none" points="205.22,-336 205.22,-414.4 334.52,-414.4 334.52,-336 205.22,-336"/>
+<polygon fill="#1b563f" stroke="none" points="206.22,-391.4 206.22,-413.4 333.52,-413.4 333.52,-391.4 206.22,-391.4"/>
+<text text-anchor="start" x="225.89" y="-400.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="233.89" y="-400.4" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    ProjectObject    </text>
+<text text-anchor="start" x="208.22" y="-383.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="216.22" y="-383.2" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text text-anchor="start" x="222.89" y="-383.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="261.09" y="-383.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="269.09" y="-383.2" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text text-anchor="start" x="314.87" y="-383.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="208.22" y="-369.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="216.22" y="-369.6" font-family="Roboto" font-weight="bold" font-size="8.00">project</text>
+<text text-anchor="start" x="240.65" y="-369.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="261.09" y="-369.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="269.09" y="-369.6" font-family="Roboto" font-weight="bold" font-size="8.00">ForeignKey (id)</text>
+<text text-anchor="start" x="323.52" y="-369.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="208.22" y="-356" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="216.22" y="-356" font-family="Roboto" font-size="8.00" fill="#7b7b7b">created_at</text>
+<text text-anchor="start" x="249.09" y="-356" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="261.09" y="-356" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="269.09" y="-356" font-family="Roboto" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text text-anchor="start" x="317.52" y="-356" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="208.22" y="-342.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="216.22" y="-342.4" font-family="Roboto" font-size="8.00">label</text>
+<text text-anchor="start" x="231.77" y="-342.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="261.09" y="-342.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="269.09" y="-342.4" font-family="Roboto" font-size="8.00">CharField</text>
+<text text-anchor="start" x="301.08" y="-342.4" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="205.22,-336 205.22,-414.4 334.52,-414.4 334.52,-336 205.22,-336"/>
+</g>
+<!-- core_models_ProjectObject&#45;&gt;core_models_Project -->
+<g id="edge3" class="edge">
+<title>core_models_ProjectObject-&gt;core_models_Project</title>
+<path fill="none" stroke="black" d="M265.19,-323.47C264.04,-311.05 262.83,-297.91 261.73,-285.97"/>
+<ellipse fill="black" stroke="black" cx="265.59" cy="-327.87" rx="4" ry="4"/>
+<text text-anchor="middle" x="304.44" y="-306.8" font-family="Roboto" font-size="8.00"> project (project_objects)</text>
+</g>
+<!-- core_models_ProjectObject&#45;&gt;core_models_Person -->
+<g id="edge4" class="edge">
+<title>core_models_ProjectObject-&gt;core_models_Person</title>
+<path fill="none" stroke="black" d="M334.08,-326.43C339.15,-322.31 344.14,-318.13 348.87,-314 356.65,-307.21 364.64,-299.76 372.31,-292.33"/>
+<ellipse fill="black" stroke="black" cx="330.64" cy="-329.19" rx="4" ry="4"/>
+<ellipse fill="black" stroke="black" cx="375.45" cy="-289.26" rx="4" ry="4"/>
+<text text-anchor="middle" x="416.86" y="-306.8" font-family="Roboto" font-size="8.00"> responsible_persons (projectobject)</text>
+</g>
+<!-- core_models_ProjectObject&#45;&gt;core_models_DataPoint -->
+<g id="edge5" class="edge">
+<title>core_models_ProjectObject-&gt;core_models_DataPoint</title>
+<path fill="none" stroke="black" d="M191.47,-327.35C184.77,-322.95 178.17,-318.47 171.9,-314 159.42,-305.1 146.41,-294.93 134.43,-285.15"/>
+<ellipse fill="black" stroke="black" cx="194.98" cy="-329.64" rx="4" ry="4"/>
+<ellipse fill="black" stroke="black" cx="130.97" cy="-282.31" rx="4" ry="4"/>
+<text text-anchor="middle" x="215.89" y="-306.8" font-family="Roboto" font-size="8.00"> data_points (projectobject)</text>
+</g>
+<!-- core_models_ProjectObjectDataPoint -->
+<g id="node6" class="node">
+<title>core_models_ProjectObjectDataPoint</title>
+<polygon fill="white" stroke="none" points="8,-468 8,-560 153.74,-560 153.74,-468 8,-468"/>
+<polygon fill="#1b563f" stroke="none" points="9,-537 9,-559 152.74,-559 152.74,-537 9,-537"/>
+<text text-anchor="start" x="15.23" y="-546" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="23.23" y="-546" font-family="Roboto" font-weight="bold" font-size="10.00" fill="white">    ProjectObjectDataPoint    </text>
+<text text-anchor="start" x="11" y="-528.8" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="19" y="-528.8" font-family="Roboto" font-weight="bold" font-size="8.00">id</text>
+<text text-anchor="start" x="25.67" y="-528.8" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="80.31" y="-528.8" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="88.31" y="-528.8" font-family="Roboto" font-weight="bold" font-size="8.00">BigAutoField</text>
+<text text-anchor="start" x="134.09" y="-528.8" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="11" y="-515.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="19" y="-515.2" font-family="Roboto" font-weight="bold" font-size="8.00">data_point</text>
+<text text-anchor="start" x="55.9" y="-515.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="80.31" y="-515.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="88.31" y="-515.2" font-family="Roboto" font-weight="bold" font-size="8.00">ForeignKey (id)</text>
+<text text-anchor="start" x="142.74" y="-515.2" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="11" y="-501.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="19" y="-501.6" font-family="Roboto" font-weight="bold" font-size="8.00">project_object</text>
+<text text-anchor="start" x="68.31" y="-501.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="80.31" y="-501.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="88.31" y="-501.6" font-family="Roboto" font-weight="bold" font-size="8.00">ForeignKey (id)</text>
+<text text-anchor="start" x="142.74" y="-501.6" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="11" y="-488" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="19" y="-488" font-family="Roboto" font-size="8.00" fill="#7b7b7b">created_at</text>
+<text text-anchor="start" x="51.86" y="-488" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="80.31" y="-488" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="88.31" y="-488" font-family="Roboto" font-size="8.00" fill="#7b7b7b">DateTimeField</text>
+<text text-anchor="start" x="136.74" y="-488" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="11" y="-474.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="19" y="-474.4" font-family="Roboto" font-size="8.00">value</text>
+<text text-anchor="start" x="36.32" y="-474.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="80.31" y="-474.4" font-family="Roboto" font-size="8.00">    </text>
+<text text-anchor="start" x="88.31" y="-474.4" font-family="Roboto" font-size="8.00">FloatField</text>
+<text text-anchor="start" x="121.2" y="-474.4" font-family="Roboto" font-size="8.00">    </text>
+<polygon fill="none" stroke="black" points="8,-468 8,-560 153.74,-560 153.74,-468 8,-468"/>
+</g>
+<!-- core_models_ProjectObjectDataPoint&#45;&gt;core_models_DataPoint -->
+<g id="edge7" class="edge">
+<title>core_models_ProjectObjectDataPoint-&gt;core_models_DataPoint</title>
+<path fill="none" stroke="black" d="M74.95,-455.36C72.16,-419.77 70.07,-373.19 73.25,-332 74.59,-314.62 77.4,-295.48 80.12,-279.51"/>
+<ellipse fill="black" stroke="black" cx="75.3" cy="-459.68" rx="4" ry="4"/>
+<text text-anchor="middle" x="130.56" y="-372.8" font-family="Roboto" font-size="8.00"> data_point (projectobjectdatapoint)</text>
+</g>
+<!-- core_models_ProjectObjectDataPoint&#45;&gt;core_models_ProjectObject -->
+<g id="edge6" class="edge">
+<title>core_models_ProjectObjectDataPoint-&gt;core_models_ProjectObject</title>
+<path fill="none" stroke="black" d="M155.18,-459.21C174.01,-445.58 193.96,-431.14 211.85,-418.19"/>
+<ellipse fill="black" stroke="black" cx="151.95" cy="-461.55" rx="4" ry="4"/>
+<text text-anchor="middle" x="241.33" y="-438.8" font-family="Roboto" font-size="8.00"> project_object (data_points_data)</text>
+</g>
+</g>
+</svg>
