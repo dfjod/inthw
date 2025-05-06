@@ -29,6 +29,13 @@ This is a Django-based project that provides a RESTful API for managing clients,
    - API: `http://localhost:8000/api/v1`
    - Admin Panel: `http://localhost:8000/admin/`
 
+## Notes
+
+- Django admin user: `admin/admin`
+- Password for each user matches their username
+- `.dev/core.http` can be used with VSCode and REST Client extension to make requests
+- Request JWT access token with the `api/token` endpoint then use the access token to make subsequent requests to the core API
+
 ## Project Structure
 
 ```
