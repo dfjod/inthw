@@ -1,5 +1,3 @@
-# Intellify backend homework
-
 This is a Django-based project that provides a RESTful API for managing clients, projects, persons, data points, and project objects. The project uses PostgreSQL as the database and is containerized using Docker.
 
 ## Installation
