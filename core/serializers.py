@@ -33,8 +33,8 @@ class ProjectObjectDataPointSerializer(serializers.ModelSerializer):
 
 
 class ProjectObjectSerializer(serializers.ModelSerializer):
-    responsible_persons = PersonSerializer(many=True, read_only=True)
-    data_points = DataPointSerializer(many=True, read_only=True)
+    responsible_persons = serializers.PrimaryKeyRelatedField(queryset=models.Person.objects.all(), many=True)
+    data_points = serializers.PrimaryKeyRelatedField(queryset=models.DataPoint.objects.all(), many=True)
     data_points_data = ProjectObjectDataPointSerializer(many=True, read_only=True)
 
     class Meta:

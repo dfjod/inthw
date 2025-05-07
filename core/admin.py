@@ -29,6 +29,11 @@ class ProjectObjectDataPointAdmin(admin.ModelAdmin):
         "id", "project_object", "data_point", "value", "created_at"
     ]
 
+class PersonAdmin(admin.ModelAdmin):
+    list_display = [
+        "id", "first_name", "last_name"
+    ]
+
 
 class CustomUserAdmin(UserAdmin):
     list_display = ["username", "id"]
@@ -41,6 +46,6 @@ admin.site.register(User, CustomUserAdmin)
 admin.site.register(models.Client, ClientAdmin)
 admin.site.register(models.Project, ProjectAdmin)
 admin.site.register(models.DataPoint)
-admin.site.register(models.Person)
+admin.site.register(models.Person, PersonAdmin)
 admin.site.register(models.ProjectObject, ProjectObjectAdmin)
 admin.site.register(models.ProjectObjectDataPoint, ProjectObjectDataPointAdmin)

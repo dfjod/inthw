@@ -81,7 +81,9 @@ Content-Type: application/json
 
 {
     "label": "",
-    "project": 
+    "project": 3,
+    "responsible_persons": [],
+    "data_points": []
 }
 
 ###
